@@ -29,6 +29,7 @@ in with pkgs; mkShell {
     pkg-config
     zlib
     uv
+    pip
   ];
 
   shellHook = ''
