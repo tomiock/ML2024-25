@@ -25,6 +25,7 @@ in with pkgs; mkShell {
     openssh
     rsync
     uv
+    pip
   ];
 
   shellHook = ''
