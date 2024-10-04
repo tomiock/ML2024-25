@@ -11,6 +11,7 @@ in with pkgs; mkShell {
   packages = [
 
     pythonPackages.matplotlib
+    pythonPackages.autograd
     pythonPackages.scikit-learn
     pythonPackages.venvShellHook
     pythonPackages.ipykernel
@@ -25,7 +26,6 @@ in with pkgs; mkShell {
     openssh
     rsync
     uv
-    pip
   ];
 
   shellHook = ''
