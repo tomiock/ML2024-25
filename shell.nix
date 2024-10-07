@@ -11,6 +11,7 @@ in with pkgs; mkShell {
   packages = [
 
     pythonPackages.matplotlib
+    pythonPackages.numpy
     pythonPackages.autograd
     pythonPackages.scikit-learn
     pythonPackages.venvShellHook
@@ -25,6 +26,8 @@ in with pkgs; mkShell {
     git
     openssh
     rsync
+    pkg-config
+    zlib
     uv
   ];
 
@@ -36,8 +39,8 @@ in with pkgs; mkShell {
     if test ! -d $VENV; then
       python3.12 -m venv $VENV
     fi
+
     source ./$VENV/bin/activate
-    export PYTHONPATH=`pwd`/$VENV/${python.sitePackages}/:$PYTHONPATH
     uv pip install -r requirements.txt
   '';
 
