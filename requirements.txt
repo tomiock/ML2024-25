@@ -2,3 +2,4 @@ matplotlib
 scikit-learn
 jupyter
 ipython
+autograd
